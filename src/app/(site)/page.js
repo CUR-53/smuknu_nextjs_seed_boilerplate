@@ -1,12 +1,10 @@
-"use client"
-import BoilerBox from '@/components/boilerplate/boilerbox'
-import styles from './page.module.css'
+import Hero from '@/components/site/Hero/hero';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
-    <main className={styles.page} >
-      <BoilerBox />
+    <main className={styles.page}>
+      <Hero />
     </main>
-  )
+  );
 }
-
