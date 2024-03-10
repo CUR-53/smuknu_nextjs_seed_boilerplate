@@ -1,0 +1,75 @@
+.container {
+  width: 100%;
+  height: 85vh;
+  scroll-behavior: smooth;
+}
+
+.img {
+  position: relative;
+
+  width: 100%;
+  height: 80%;
+}
+
+.img img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  width: 100%;
+  padding: 40px 0;
+  background-color: var(--color-flat);
+
+  text-align: center;
+  color: var(--color-black);
+
+  transform: translate(-50%, -50%);
+
+  overflow: hidden;
+}
+
+.text h1 {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 30px 10px 30px;
+
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text p {
+  margin: 0 30px;
+
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.text button {
+  margin-top: 20px;
+  padding: 15px 40px;
+  border: none;
+  border: 2px solid var(--color-pink);
+  border-radius: 100px;
+  background-color: var(--color-pink);
+
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--color-white);
+
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.text button:hover {
+  border: 2px solid var(--color-pink);
+  background-color: var(--color-flat);
+
+  color: var(--color-pink);
+}

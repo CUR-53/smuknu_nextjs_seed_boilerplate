@@ -1,0 +1,17 @@
+.container {
+  border: 1px red solid;
+}
+
+.container .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .answer {
+  display: none;
+}
+
+.container.active .answer {
+  display: block;
+}

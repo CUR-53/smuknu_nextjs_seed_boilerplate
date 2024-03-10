@@ -1,0 +1,37 @@
+.container {
+  width: 100%;
+  padding: 30px 0;
+  background-color: var(--color-grey);
+  text-align: center;
+}
+
+/* Socials */
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  color: #fff;
+  font-size: clamp(2.5rem, 3.5vw, 4rem);
+  margin: 0 10px;
+}
+
+.icon:hover {
+  color: var(--color-pink);
+  cursor: pointer;
+}
+
+.contact {
+  margin-top: 20px;
+}
+
+.contact a {
+  display: block;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.contact a:hover {
+  color: var(--color-pink);
+}

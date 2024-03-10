@@ -4,46 +4,54 @@
   justify-content: space-between;
 
   position: relative;
-  z-index: 2;
+  z-index: 10;
 
   height: 100%;
-  padding: 20px 30px;
-  background-color: white;
+  padding: 15px 30px;
+  background-color: var(--color-white);
 }
 
 .logo img {
   width: auto;
-  height: 50px;
+  height: 45px;
 }
 
 .nav {
   font-size: 1.8rem;
-  color: #fa97aa;
+  color: var(--color-pink);
 
   cursor: pointer;
 }
 
 .menu {
   position: absolute;
-  top: -100px;
+  top: -300px;
+  z-index: 9;
 
   width: 100%;
-  padding: 50px;
-  padding: 20px 35px;
   border-radius: 0 0 20px 20px;
-  background-color: black;
+  background-color: var(--color-black);
+
+  color: var(--color-white);
 
   transition: top 0.2s ease-in-out;
 }
 
 .menu.open {
-  top: 95px;
+  top: 74px;
 }
 
 .menu li {
+  padding: 5px 35px;
+
   text-align: right;
 
   list-style: none;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background-color: var(--color-pink);
 }
 
 .menu li a {

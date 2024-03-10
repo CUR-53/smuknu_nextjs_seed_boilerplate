@@ -1,3 +1,4 @@
+import Footer from '@/components/site/common/footer/footer';
 import Header from '@/components/site/common/header/header';
 
 const menuData = [
@@ -8,13 +9,18 @@ const menuData = [
   },
   {
     id: 2,
-    title: 'Om os',
-    url: '/om-os',
+    title: 'Vores Produkter',
+    url: '/produkter',
   },
   {
     id: 3,
-    title: 'Kontakt',
-    url: '/kontakt',
+    title: 'Spørg om sundhed',
+    url: '/sundhed',
+  },
+  {
+    id: 4,
+    title: 'Blev medlem',
+    url: '/medlem',
   },
 ];
 
@@ -26,6 +32,7 @@ export default function siteLayout({ children }) {
     <div>
       <Header menu={menuData} logoPath={logoPath} logoAlt={logoAlt} />
       {children}
+      <Footer />
     </div>
   );
 }

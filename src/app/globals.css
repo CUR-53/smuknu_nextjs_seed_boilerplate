@@ -1,44 +1,61 @@
 :root {
-  /* Global Variables */
-  --main-color: lightblue;
+  --main-color: #f1f1f1;
+  --color-black: #000;
+  --color-pink: #fa96aa;
+  --color-grey: #d9d9d9;
+  --color-flat: #f7f0f2;
+  --color-white: #fff;
+  --color-shadow: #00000029;
 
-  /* Component Specific Variables */
-  --box-color: #fff;
+  --color-font-base: #000;
+  --color-font-secondary: #707070;
+  --color-background-base: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Global Variables */
-    --main-color: #333;
+    --main-color: #f1f1f1;
+    --color-black: #000;
+    --color-pink: #fa96aa;
+    --color-grey: #d9d9d9;
+    --color-flat: #f7f0f2;
+    --color-white: #fff;
+    --color-shadow: #00000029;
 
-    /* Component Specific Variables */
-    --box-color: rgb(235, 235, 160);
+    --color-font-base: #000;
+    --color-font-secondary: #707070;
+    --color-background-base: #fff;
   }
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
 }
 
 html,
 body {
-  background-color: var(--main-color);
+  max-width: 100vw;
+  overflow-x: hidden;
+  color: var(--color-black);
+}
+
+p {
+  margin: 10px 0;
 }
 
 body {
-  background-color: var(--main-color);
-  font-family: ;
+  background-color: var(--color-background-base);
+  scroll-behavior: smooth;
 }
 
 a {
   color: inherit;
-  text-decoration: underline;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+  text-decoration: none;
 }
