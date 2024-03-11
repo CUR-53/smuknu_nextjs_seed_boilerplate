@@ -6,7 +6,7 @@ const Medlem = () => {
     <section className={styles.container}>
       <h2>Medlem?</h2>
       <p>Vær med i kundeklubben for nye videoer, rabatkoder og mere!</p>
-      <Link href="/#">
+      <Link href="/medlem">
         <button>Blev medlem af kundeklubben</button>
       </Link>
     </section>

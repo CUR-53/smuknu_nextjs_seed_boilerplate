@@ -7,16 +7,14 @@ const Accordion = ({ question, answer }) => {
 
   return (
     <div className={`${styles.container} ${open ? styles.active : null}`}>
-      <div className={styles.question} onClick={() => setOpen(!open)}>
-        <div>
-          <i>
-            <FaQuestion />
-          </i>
-          {question}
-        </div>
+      <div className={`${styles.question} ${open ? styles.active : null}`} onClick={() => setOpen(!open)}>
+        <i className={styles.icon}>
+          <FaQuestion />
+        </i>
+        <p>{question}</p>
       </div>
 
-      <div className={styles.answer}>{answer}</div>
+      <p className={styles.answer}>{answer}</p>
     </div>
   );
 };

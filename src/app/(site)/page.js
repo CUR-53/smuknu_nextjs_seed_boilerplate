@@ -15,11 +15,16 @@ const heroData = {
   imgAlt: 'hero image',
 };
 
+const productCollectionData = {
+  title: 'Udvalgt',
+  colorTitle: 'skønhed',
+};
+
 export default function Home() {
   return (
     <main className={styles.page}>
       <Hero data={heroData} />
-      <ProductCollection />
+      <ProductCollection data={productCollectionData} />
       <Reviews />
       <Medlem />
     </main>

@@ -3,7 +3,7 @@ import ProductCard from '../../snippets/product-card/product-card';
 import styles from './product-collection.module.css';
 import { useEffect, useState } from 'react';
 
-const ProductCollection = () => {
+const ProductCollection = ({ data }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const ProductCollection = () => {
   return (
     <section id="udvalgtSloenhed" className={styles.container}>
       <h2 className={styles.title}>
-        Udvalgt <span>skønhed</span>
+        {data.title} <span>{data.colorTitle}</span>
       </h2>
       <div className={styles.grid}>
         {products.map((Product) => {
