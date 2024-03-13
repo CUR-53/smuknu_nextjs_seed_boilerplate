@@ -11,7 +11,7 @@ const Hero = ({ data }) => {
           <h1>{data.title}</h1>
           <p>{data.byline}</p>
           <p>{data.paragraph}</p>
-          <Link href={data.buttonLink}>
+          <Link className={styles.buttonContainer} href={data.buttonLink}>
             <button>{data.button}</button>
           </Link>
         </div>

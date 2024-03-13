@@ -1,8 +1,12 @@
-'use client';
 import styles from './page.module.css';
 import HeroTwo from '@/components/site/sections/heroTwo/heroTwo';
 import ProductCollection from '@/components/site/sections/product-collection/product-collection';
 import Medlem from '@/components/site/sections/medlem/medlem';
+
+export const metadata = {
+  title: 'MediaCollege Denmark products',
+  description: 'Vi arbejder...',
+};
 
 const heroTwoData = {
   title: 'Skønne produkter',
