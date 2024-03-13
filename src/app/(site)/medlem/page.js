@@ -1,4 +1,3 @@
-'use client';
 import styles from './page.module.css';
 import HeroTwo from '@/components/site/sections/heroTwo/heroTwo';
 import SignupMedlem from '@/components/site/sections/signup/signup';
