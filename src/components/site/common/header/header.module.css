@@ -1,14 +1,17 @@
 .container {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  background-color: var(--color-white);
+}
+
+.box {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  position: relative;
-  z-index: 10;
-
-  height: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
   padding: 20px 30px;
-  background-color: var(--color-white);
 }
 
 .logo img {
@@ -25,8 +28,14 @@
 
 .menu {
   position: absolute;
+  max-width: 1200px;
+  margin: 0 auto;
+
   top: -300px;
   z-index: 9;
+
+  left: 50%;
+  transform: translate(-50%);
 
   width: 100%;
   border-radius: 0 0 15px 15px;

@@ -1,6 +1,9 @@
+'use client';
 import styles from './page.module.css';
 import HeroTwo from '@/components/site/sections/heroTwo/heroTwo';
 import SignupMedlem from '@/components/site/sections/signup/signup';
+import SignupResponse from '@/components/site/snippets/signup-response/signup-response';
+import { useState } from 'react';
 
 const heroTwoData = {
   title: 'Bliv medlem',
@@ -16,10 +19,13 @@ const heroTwoData = {
 };
 
 const Page = () => {
+  const [subscriberName, setSubscriberName] = useState('');
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
   return (
     <div className={styles.container}>
       <HeroTwo data={heroTwoData} />
-      <SignupMedlem />
+      {formSubmitted ? <SignupResponse name={subscriberName} /> : <SignupMedlem setFormSubmitted={setFormSubmitted} setSubscriberName={setSubscriberName} />}
     </div>
   );
 };

@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main className={styles.page}>
       <Hero data={heroData} />
-      <ProductCollection data={productCollectionData} />
+      <ProductCollection data={productCollectionData} recommended={true} />
       <Reviews />
       <Medlem />
     </main>

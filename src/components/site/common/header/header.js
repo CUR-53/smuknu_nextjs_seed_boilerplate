@@ -11,13 +11,15 @@ const Header = ({ menu, logoPath, logoAlt }) => {
   return (
     <header>
       <div className={styles.container}>
-        <div className={styles.logo}>
-          <Link href="/">
-            <Image src={logoPath} alt={logoAlt} width={200} height={200} />
-          </Link>
-        </div>
-        <div onClick={() => setMenuOpen(!menuOpen)} className={styles.nav}>
-          <RxHamburgerMenu />
+        <div className={styles.box}>
+          <div className={styles.logo}>
+            <Link href="/">
+              <Image src={logoPath} alt={logoAlt} width={200} height={200} />
+            </Link>
+          </div>
+          <div onClick={() => setMenuOpen(!menuOpen)} className={styles.nav}>
+            <RxHamburgerMenu />
+          </div>
         </div>
       </div>
       <div className={`${styles.menu} ${menuOpen ? styles.open : ''}`} onClick={() => setMenuOpen(false)}>

@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import styles from './signup.module.css';
 
-const SignupMedlem = () => {
+const SignupMedlem = ({ setFormSubmitted, setSubscriberName }) => {
   useEffect(() => {
     const form = document.querySelector('form');
     form.addEventListener('submit', (e) => {
@@ -17,9 +17,14 @@ const SignupMedlem = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ name, email, message }),
-      });
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          setSubscriberName(name);
+          setFormSubmitted(true);
+        });
     });
-  }, []);
+  }, [setFormSubmitted, setSubscriberName]);
 
   return (
     <section>

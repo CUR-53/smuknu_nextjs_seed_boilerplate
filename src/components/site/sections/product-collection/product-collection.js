@@ -3,18 +3,20 @@ import ProductCard from '../../snippets/product-card/product-card';
 import styles from './product-collection.module.css';
 import { useEffect, useState } from 'react';
 
-const ProductCollection = ({ data }) => {
+const ProductCollection = ({ data, recommended }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const getProducts = async () => {
       const response = await fetch('/api/products');
       const data = await response.json();
-      setProducts(data);
+
+      let filteredData = recommended ? data.filter((productfilter) => productfilter.recommended === true) : data;
+      setProducts(filteredData);
     };
 
     getProducts();
-  }, []);
+  }, [recommended]);
 
   return (
     <section id="udvalgtSloenhed" className={styles.container}>
