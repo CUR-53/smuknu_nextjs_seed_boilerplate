@@ -25,9 +25,9 @@ const Header = ({ menu, logoPath, logoAlt }) => {
       <div className={`${styles.menu} ${menuOpen ? styles.open : ''}`} onClick={() => setMenuOpen(false)}>
         <ul>
           {menu.map((item) => (
-            <li key={item.id}>
-              <a href={item.url}>{item.title}</a>
-            </li>
+            <Link href={item.url} key={item.id}>
+              <li>{item.title}</li>
+            </Link>
           ))}
         </ul>
       </div>

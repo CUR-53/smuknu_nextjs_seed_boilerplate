@@ -36,6 +36,14 @@
   overflow: hidden;
 }
 
+/* Responsive 768px */
+@media screen and (min-width: 768px) {
+  .text {
+    max-width: 1200px;
+    width: 100%;
+  }
+}
+
 .text h1 {
   margin: 0 auto;
   padding: 0 30px 20px 30px;

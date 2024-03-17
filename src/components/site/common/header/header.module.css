@@ -63,7 +63,7 @@
   background-color: var(--color-pink);
 }
 
-.menu li a {
+.menu li {
   font-size: 18px;
   text-decoration: none;
   text-transform: uppercase;
