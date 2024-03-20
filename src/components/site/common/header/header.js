@@ -22,6 +22,7 @@ const Header = ({ menu, logoPath, logoAlt }) => {
           </div>
         </div>
       </div>
+
       <div className={`${styles.menu} ${menuOpen ? styles.open : ''}`} onClick={() => setMenuOpen(false)}>
         <ul>
           {menu.map((item) => (
